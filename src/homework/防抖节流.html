@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 防抖
+            // 当持续触发事件，一定时间内没有再触发事件，事件处理函数才会再执行一次
+            // 防抖的实现：
+            // 1.声明一个全部变量存储定时器ID。
+            // 2.每一次触发交互的时候，先清除上一次的定时器，然后开启本次定时器。
+            const debounce = (delay, fn) => {
+                let timer
+                if (timer) clearTimeout(timer)
+                timer = setTimeout(() => {
+                    fn()
+                }, delay)
+            }
+            // 节流
+            // 当很快的触发事件时，但是事件只会在经过规定时间后才会触发一次
+            // 节流的实现：
+            // 1.声明一个全部变量存储定时器ID。
+            // 2.每一次触发交互的时候，会先查询timer中是否还有定时器，还有的话表示间隔时间没到，没有触发定时器内的回调函数，直接return不重置定时器，保证时间间隔到了再重新触发
+            const throttle = (delay, fn) => {
+                let timer
+                if (timer) return
+                timer = setTimeout(() => {
+                    fn()
+                    timer = null
+                }, delay)
+            }
+        </script>
+    </body>
+</html>
