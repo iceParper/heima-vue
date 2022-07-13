@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 查询 str='asdasdasdasdasdasd'中各个字母出现的次数
+            let str = 'asdasdasdasdasdasd'
+            let arr = str.split('')
+            let obj = {}
+            arr.reduce((pre, cur) => {
+                // console.log(pre, cur)
+                if (obj[cur] != undefined) {
+                    obj[cur] += 1
+                } else {
+                    obj[cur] = 1
+                }
+            }, 0)
+            console.log(obj)
+        </script>
+    </body>
+</html>
