@@ -1,9 +1,14 @@
 <template>
-    <div id="app"></div>
+    <div id="app">
+        <App />
+    </div>
 </template>
 
 <script>
+import App from './components/附加练习-百度换肤.vue';
 export default {
-    name: 'App',
+    components: {
+        App,
+    },
 };
 </script>
