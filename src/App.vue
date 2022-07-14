@@ -5,10 +5,9 @@
 </template>
 
 <script>
-import App from './components/折叠面板-案例.vue'
+import App from './homework/模拟v-model指令.vue'
 export default {
-    name: 'App',
-    component: {
+    components: {
         App,
     },
 }
