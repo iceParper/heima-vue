@@ -20,6 +20,7 @@ export default {
     },
     filters: {
         handleFans: (val, unit) => {
+            val = unit == '万' ? val / 10000 : val / 1000
             return val + unit
         },
         handleDate: (date, format) => {

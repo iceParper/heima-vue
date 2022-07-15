@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import App from './homework2/购物车-作业.vue'
+import App from './homework2/过滤器-作业.vue'
 export default {
     components: {
         App,
