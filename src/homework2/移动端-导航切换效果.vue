@@ -3,9 +3,10 @@
         <div class="nav_left" id="navLeft">
             <div class="nav_content">
                 <span
-                    :class="{ active: index == currentId }"
-                    v-for="{ item, index } in arr"
+                    :class="{ active: currentId == index }"
+                    v-for="(item, index) in arr"
                     :key="item.first_id"
+                    @click="currentId = index"
                 >
                     {{ item.first_name }}
                 </span>
