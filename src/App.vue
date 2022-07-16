@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import App from './homework2/购物车-作业.vue'
+import App from './components/17-品牌管理案例.vue'
 export default {
     components: {
         App,
