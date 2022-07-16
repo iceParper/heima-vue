@@ -1,9 +1,14 @@
 <template>
-    <div id="app"></div>
+  <div id="app">
+    <App />
+  </div>
 </template>
 
 <script>
+import App from "./components/03-父向子-配合循环.vue";
 export default {
-    name: 'App',
+  components: {
+    App,
+  },
 };
 </script>
