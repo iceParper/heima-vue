@@ -1,7 +1,7 @@
 <template>
   <div>
-    <input ref="myInp" type="text" placeholder="这是一个输入框" />
-    <button>点击我进行搜索</button>
+    <input ref="myInp" type="text" placeholder="这是一个输入框" v-if="isShow" />
+    <button @click="handleClick">点击我进行搜索</button>
   </div>
 </template>
 
@@ -10,14 +10,21 @@
 // 1. 获取到输入框
 // 2. 输入框调用事件方法focus()达到聚焦行为
 export default {
-  name: "TickTest",
+  name: 'TickTest',
   data() {
     return {
       isShow: false,
-    };
+    }
   },
-  methods: {},
-};
+  methods: {
+    handleClick() {
+      this.isShow = true
+      this.$nextTick(() => {
+        this.$refs.myInp.focus()
+      })
+    },
+  },
+}
 </script>
 
 <style></style>
