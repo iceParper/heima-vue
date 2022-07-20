@@ -1,9 +1,12 @@
 <template>
-    <div id="app"></div>
+  <div id="app">
+    <App />
+  </div>
 </template>
 
 <script>
+import App from './components/UseDirective.vue'
 export default {
-    name: 'App',
-};
+  components: { App },
+}
 </script>
