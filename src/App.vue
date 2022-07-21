@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import App from './components/UseDirective.vue'
+import App from './views/06_UseTable.vue'
 export default {
   components: { App },
 }
